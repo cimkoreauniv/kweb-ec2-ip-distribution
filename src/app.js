@@ -27,4 +27,14 @@ app.get("/key", (req, res) => {
   return res.download(`${__dirname}/../files/kweb23-backend-practice-wed.pem`);
 });
 
+app.post("/upload", (req, res) => {
+  if (req.query.password === process.env.PASSWORD) {
+    json = JSON.parse(req.query.payload);
+    console.log("Data uploaded");
+  } else {
+    console.log("Password Incorrect");
+  }
+  return res.redirect("/");
+});
+
 module.exports = app;
