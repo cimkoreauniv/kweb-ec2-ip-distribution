@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title
+            | Get EC2 IP
+        meta(charset='utf-8')
+        meta(name='viewport',
+             content='width=device-width, initial-scale=1')
+    body
+        form(method='post')
+            div
+                span 학번
+                input(name='student_number', type='number')
+            div
+                span 이름
+                input(name='student_name', type='text')
+            button(type='submit') Get IP
