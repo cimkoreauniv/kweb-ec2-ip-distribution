@@ -9,6 +9,8 @@ r = csv.reader(open('data.csv'))
 object = {}
 
 for name, number, ip in r:
+    if not name or not number:
+        continue
     object[number] = {'ip': ip, 'name': name}
 
 writeFile.write(json.dumps(object, ensure_ascii=False))
