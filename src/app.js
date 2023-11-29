@@ -3,8 +3,7 @@ const fs = require("fs");
 
 const app = express();
 
-const data = fs.readFileSync(`${__dirname}/../data.json`);
-const json = JSON.parse(data);
+let json;
 
 app.set("views", `${__dirname}/../views`);
 app.set("view engine", "pug");
